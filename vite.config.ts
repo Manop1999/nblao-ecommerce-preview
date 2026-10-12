@@ -12,7 +12,13 @@ export default defineConfig(({ mode }) => {
   const emitSourcemaps = mode === 'development'
 
   return {
-    base: process.env.FIGMA_PUBLIC_URL ? `${process.env.FIGMA_PUBLIC_URL}/` : '/',
+    // GitHub Pages project sites are served from /<repository-name>/.
+    // Set GITHUB_PAGES=true only in the Pages deployment build.
+    base: process.env.GITHUB_PAGES === 'true'
+      ? '/nblao-ecommerce-preview/'
+      : process.env.FIGMA_PUBLIC_URL
+        ? `${process.env.FIGMA_PUBLIC_URL}/`
+        : '/',
     build: {
       sourcemap: emitSourcemaps ? 'inline' : false,
       minify: !emitSourcemaps,
