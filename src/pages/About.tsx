@@ -9,12 +9,12 @@ const BLUE = 'var(--nb-primary)'
 const GOLD = 'var(--nb-gold)'
 
 const INDUSTRIES = [
-  { name: 'Power & Energy', img: '/site-images/df0bbd67f314.jpg', desc: 'High-voltage equipment, transformers, and grid infrastructure.' },
-  { name: 'Oil & Gas', img: '/site-images/b4cdb1afbd7f.jpg', desc: 'Pumps, valves, and pressure-rated industrial components.' },
-  { name: 'Construction', img: '/site-images/cf40f0fd1621.jpg', desc: 'Heavy machinery, lifting equipment, and site safety solutions.' },
-  { name: 'Manufacturing', img: '/site-images/e1506822243e.jpg', desc: 'Automation, conveyors, and precision engineering tools.' },
-  { name: 'Mining', img: '/site-images/faccb7973b7e.jpg', desc: 'Extraction equipment, safety systems, and site infrastructure.' },
-  { name: 'Water & Utilities', img: '/site-images/64446e0c5122.jpg', desc: 'Pumping stations, flow control, and treatment equipment.' },
+  { name: 'Power & Energy', img: import.meta.env.BASE_URL + 'site-images/df0bbd67f314.jpg', desc: 'High-voltage equipment, transformers, and grid infrastructure.' },
+  { name: 'Oil & Gas', img: import.meta.env.BASE_URL + 'site-images/b4cdb1afbd7f.jpg', desc: 'Pumps, valves, and pressure-rated industrial components.' },
+  { name: 'Construction', img: import.meta.env.BASE_URL + 'site-images/cf40f0fd1621.jpg', desc: 'Heavy machinery, lifting equipment, and site safety solutions.' },
+  { name: 'Manufacturing', img: import.meta.env.BASE_URL + 'site-images/e1506822243e.jpg', desc: 'Automation, conveyors, and precision engineering tools.' },
+  { name: 'Mining', img: import.meta.env.BASE_URL + 'site-images/faccb7973b7e.jpg', desc: 'Extraction equipment, safety systems, and site infrastructure.' },
+  { name: 'Water & Utilities', img: import.meta.env.BASE_URL + 'site-images/64446e0c5122.jpg', desc: 'Pumping stations, flow control, and treatment equipment.' },
 ]
 
 const CERTS = [
@@ -45,7 +45,7 @@ export default function About() {
       {/* Hero */}
       <section className="relative overflow-hidden" style={{ background: NAVY, minHeight: 320 }}>
         <div className="absolute inset-0">
-          <img src="/site-images/578c95d1df8b.jpg" alt="Industrial" className="w-full h-full object-cover opacity-20" />
+          <img src={`${import.meta.env.BASE_URL}site-images/578c95d1df8b.jpg`} alt="Industrial" className="w-full h-full object-cover opacity-20" />
         </div>
         <div className="relative max-w-[1440px] mx-auto px-6 lg:px-16 py-20">
           <div className="flex items-center gap-3 mb-5">
@@ -90,7 +90,7 @@ export default function About() {
               NB Lao Sole Co., Ltd. was founded with a singular vision: to bridge the gap between global industrial excellence and Laos' rapidly growing infrastructure demands. Starting as a small electrical components distributor in Vientiane, we have grown into the country's most comprehensive industrial supply partner.
             </p>
             <p className="font-ui text-[14px] leading-relaxed mb-4" style={{ color: 'var(--nb-text-secondary)' }}>
-              Today, we maintain authorised distributor agreements with 12 of the world's leading industrial brands, a technical team of 45+ specialists, and a warehouse exceeding 5,000 m² fully stocked with critical inventory.
+              Today, we maintain authorised distributor agreements with 12 of the world's leading industrial brands, a technical team of 45+ specialists, and a warehouse exceeding 5,000 mÂ² fully stocked with critical inventory.
             </p>
             <p className="font-ui text-[14px] leading-relaxed" style={{ color: 'var(--nb-text-secondary)' }}>
               Our clients include power generation companies, construction conglomerates, mining operations, and government infrastructure projects across Laos and the Greater Mekong Subregion.

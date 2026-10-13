@@ -103,7 +103,7 @@ export const DEFAULT_LEADERSHIP: LeadershipItem[] = [
   {
     id: 'leader-bounkhong',
     section: 'team',
-    image: '/site-images/345e73efccf1.jpg',
+    image: import.meta.env.BASE_URL + 'site-images/345e73efccf1.jpg',
     nameEn: 'Mr. Bounkhong Phommasack',
     nameLo: '',
     positionEn: 'Chief Executive Officer',
@@ -120,7 +120,7 @@ export const DEFAULT_LEADERSHIP: LeadershipItem[] = [
   {
     id: 'leader-khamla',
     section: 'team',
-    image: '/site-images/649924e68bdf.jpg',
+    image: import.meta.env.BASE_URL + 'site-images/649924e68bdf.jpg',
     nameEn: 'Ms. Khamla Sysouphanh',
     nameLo: '',
     positionEn: 'Head of Sales & Partnerships',
@@ -137,7 +137,7 @@ export const DEFAULT_LEADERSHIP: LeadershipItem[] = [
   {
     id: 'leader-somphong',
     section: 'team',
-    image: '/site-images/20c1d8176894.jpg',
+    image: import.meta.env.BASE_URL + 'site-images/20c1d8176894.jpg',
     nameEn: 'Mr. Somphong Viravong',
     nameLo: '',
     positionEn: 'Technical Director',
@@ -154,7 +154,7 @@ export const DEFAULT_LEADERSHIP: LeadershipItem[] = [
   {
     id: 'leader-naly',
     section: 'team',
-    image: '/site-images/a635d4424526.jpg',
+    image: import.meta.env.BASE_URL + 'site-images/a635d4424526.jpg',
     nameEn: 'Ms. Naly Keovongsa',
     nameLo: '',
     positionEn: 'Operations Manager',
