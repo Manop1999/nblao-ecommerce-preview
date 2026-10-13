@@ -36,12 +36,12 @@ const STATS = [
 ]
 
 const CAT_IMAGES: Record<string, string> = {
-  'Electrical Equipment': '/site-images/c323e3f37dfd.jpg',
-  'Industrial Machinery': '/site-images/e169c380d5ea.jpg',
-  'Power & Energy': '/site-images/1444ffae0af2.jpg',
-  'Tools & Equipment': '/site-images/f11d3f0cacb2.jpg',
-  'Safety & Fire Protection': '/site-images/3595a0eb5f49.jpg',
-  'Cables & Accessories': '/site-images/fe8658504d59.jpg',
+  'Electrical Equipment': `${import.meta.env.BASE_URL}site-images/c323e3f37dfd.jpg`,
+  'Industrial Machinery': `${import.meta.env.BASE_URL}site-images/e169c380d5ea.jpg`,
+  'Power & Energy': `${import.meta.env.BASE_URL}site-images/1444ffae0af2.jpg`,
+  'Tools & Equipment': `${import.meta.env.BASE_URL}site-images/f11d3f0cacb2.jpg`,
+  'Safety & Fire Protection': `${import.meta.env.BASE_URL}site-images/3595a0eb5f49.jpg`,
+  'Cables & Accessories': `${import.meta.env.BASE_URL}site-images/fe8658504d59.jpg`,
 }
 
 const CAT_DESC: Record<string, string> = {
@@ -78,7 +78,7 @@ function Hero() {
     <section className="relative flex items-center overflow-hidden min-h-[460px] lg:min-h-[560px]" style={{ background: 'var(--nb-navy)' }}>
       <div className="absolute inset-0" style={{ pointerEvents: 'none' }}>
         <img
-          src="/site-images/73dcaba7ec9f.jpg"
+          src={`${import.meta.env.BASE_URL}site-images/73dcaba7ec9f.jpg`}
           alt="High-voltage electrical substation"
           className="w-full h-full object-cover"
           style={{ opacity: 0.9 }}
@@ -512,7 +512,7 @@ function IndustriesSection() {
           </div>
           <div className="hidden lg:block relative">
             <div className="relative overflow-hidden" style={{ height: 380, background: 'var(--nb-navy)' }}>
-              <img src="/site-images/3ea03ff0d86f.jpg"
+              <img src={`${import.meta.env.BASE_URL}site-images/3ea03ff0d86f.jpg`}
                 alt="Industrial facility" className="w-full h-full object-cover" style={{ opacity: 0.55 }} />
               <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(8,46,97,0.92) 0%, rgba(8,46,97,0.2) 55%, transparent 100%)' }} />
               <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -569,7 +569,7 @@ function CTASection() {
   return (
     <section className="relative overflow-hidden py-10 lg:py-16" style={{ background: 'var(--nb-navy)' }}>
       <div className="absolute inset-0" style={{ pointerEvents: 'none' }}>
-        <img src="/site-images/5ebe4e342d35.jpg"
+        <img src={`${import.meta.env.BASE_URL}site-images/5ebe4e342d35.jpg`}
           alt="Industrial factory" className="w-full h-full object-cover" style={{ opacity: 0.18 }} />
         <div className="absolute inset-0" style={{ background: 'rgba(7,33,61,0.55)', pointerEvents: 'none' }} />
       </div>
