@@ -22,6 +22,25 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Verify Git LFS image assets
+        shell: bash
+        run: |
+          pointers="$(grep -RIl \
+            --include='*.png' \
+            --include='*.jpg' \
+            --include='*.jpeg' \
+            --include='*.webp' \
+            --include='*.gif' \
+            'git-lfs.github.com/spec/v1' public || true)"
+          if [ -n "$pointers" ]; then
+            echo "ERROR: Git LFS pointer files were found instead of real image assets:"
+            echo "$pointers"
+            exit 1
+          fi
+          echo "Git LFS image assets verified."
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
