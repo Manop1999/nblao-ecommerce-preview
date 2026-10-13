@@ -1,4 +1,4 @@
-﻿name: Deploy NB LAO E-Commerce to GitHub Pages
+name: Deploy NB LAO E-Commerce to GitHub Pages
 
 on:
   push:
@@ -16,7 +16,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     permissions:
       contents: read
 
@@ -43,6 +42,9 @@ jobs:
         env:
           GITHUB_PAGES: 'true'
 
+      - name: Add SPA fallback for React Router
+        run: cp dist/index.html dist/404.html
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
@@ -54,11 +56,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     permissions:
       pages: write
       id-token: write
@@ -67,4 +67,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

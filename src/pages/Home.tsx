@@ -324,7 +324,7 @@ function SalesPromotions() {
             return (
               <article key={placement.id} className="flex flex-col" style={{ background: '#fff', border: '1px solid var(--nb-border)' }} onMouseEnter={() => setHovered(product.id)} onMouseLeave={() => setHovered(null)}>
                 <div className="relative overflow-hidden bg-slate-100 h-[132px] sm:h-36 lg:h-40">
-                  <Link to={`/products/${product.id}`} className="block w-full h-full"><img src={product.img || '/product-placeholder.svg'} onError={event => { event.currentTarget.src = '/product-placeholder.svg' }} alt={product.name} className="w-full h-full object-contain transition-transform duration-500" style={{ transform: isHov ? 'scale(1.05)' : 'scale(1)' }} /></Link>
+                  <Link to={`/products/${product.id}`} className="block w-full h-full"><img src={product.img || `${import.meta.env.BASE_URL}product-placeholder.svg`} onError={event => { event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg` }} alt={product.name} className="w-full h-full object-contain transition-transform duration-500" style={{ transform: isHov ? 'scale(1.05)' : 'scale(1)' }} /></Link>
                   <span className="absolute top-2 left-2 px-1.5 py-0.5 font-ui text-[8px] font-700 tracking-[0.12em] text-white" style={{ background: placement.type === 'promotion' ? GOLD : BLUE }}>{placement.type === 'promotion' ? 'SALE' : 'SELECTED'}</span>
                   <button type="button" onClick={() => toggleWishlist(product.id)} aria-label={inWish ? `Remove ${product.name} from wishlist` : `Add ${product.name} to wishlist`} className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center bg-white/90 hover:bg-white" style={{ color: inWish ? '#ef4444' : '#94a3b8' }}><HeartIcon filled={inWish} /></button>
                   <div className="absolute bottom-0 left-0 right-0 h-[2px] transition-opacity duration-300" style={{ background: GOLD, opacity: isHov ? 1 : 0 }} />
@@ -432,7 +432,7 @@ function FeaturedProducts() {
                 onMouseEnter={() => setHovered(p.id)} onMouseLeave={() => setHovered(null)}>
                 <div className="relative overflow-hidden bg-slate-100" style={{ height: 140 }}>
                   <Link to={`/products/${p.id}`}>
-                    <img src={p.img || '/product-placeholder.svg'} onError={event => { event.currentTarget.src = '/product-placeholder.svg' }} alt={p.name} className="w-full h-full object-contain transition-transform duration-500"
+                    <img src={p.img || `${import.meta.env.BASE_URL}product-placeholder.svg`} onError={event => { event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg` }} alt={p.name} className="w-full h-full object-contain transition-transform duration-500"
                       style={{ transform: isHov ? 'scale(1.05)' : 'scale(1)' }} />
                   </Link>
                   <button onClick={() => toggleWishlist(p.id)}

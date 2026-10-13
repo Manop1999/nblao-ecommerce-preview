@@ -194,7 +194,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         ...advertisement,
         placement: advertisement.placement || "main",
         image: advertisement.image.includes("photo-1509390144018-eeaf65052242")
-          ? "/advertisements/power-solutions.jpg"
+          ? `${import.meta.env.BASE_URL}advertisements/power-solutions.jpg`
           : advertisement.image,
       }),
     ),

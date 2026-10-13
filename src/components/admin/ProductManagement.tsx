@@ -89,7 +89,7 @@ export default function ProductManagement() {
             {products.map(product => (
               <tr key={product.id} className="border-b border-slate-100">
                 <td className="px-4 py-3"><div className="flex items-center gap-3">
-                  <img src={product.img || '/product-placeholder.svg'} onError={event => { event.currentTarget.src = '/product-placeholder.svg' }} alt="" className="w-12 h-10 object-contain bg-slate-50" />
+                  <img src={product.img || `${import.meta.env.BASE_URL}product-placeholder.svg`} onError={event => { event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg` }} alt="" className="w-12 h-10 object-contain bg-slate-50" />
                   <span className="font-ui text-[12px] font-600 max-w-52 line-clamp-2" style={{ color: NAVY }}>{product.name}</span>
                 </div></td>
                 <td className="px-4 py-3 font-ui text-[11px] text-slate-500">{product.sku}</td>

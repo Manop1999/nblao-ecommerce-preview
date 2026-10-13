@@ -68,7 +68,7 @@ export const DEFAULT_ADVERTISEMENTS: Advertisement[] = [
     descriptionLo: 'ໝໍ້ແປງໄຟ, ສະວິດເກຍ ແລະ ອຸປະກອນຈ່າຍໄຟທີ່ໄດ້ມາດຕະຖານສຳລັບໂຄງການ.',
     ctaEn: 'Explore Power Solutions',
     ctaLo: 'ເບິ່ງໂຊລູຊັນພະລັງງານ',
-    image: '/advertisements/power-solutions.jpg',
+    image: `${import.meta.env.BASE_URL}advertisements/power-solutions.jpg`,
     destinationUrl: '/products?category=Power%20%26%20Energy',
     active: true,
     displayOrder: 1,

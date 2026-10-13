@@ -256,7 +256,7 @@ function ProductCard({ product, view }: { product: Product; view: 'grid' | 'list
       <div className="flex gap-3 p-3 transition-colors" style={{ background: hov ? 'var(--nb-surface)' : '#fff', borderBottom: '1px solid var(--nb-border)' }}
         onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}>
         <Link to={`/products/${product.id}`} className="shrink-0 overflow-hidden" style={{ width: 80, height: 68, minWidth: 80, background: 'var(--nb-bg)' }}>
-          <img src={product.img || '/product-placeholder.svg'} onError={event => { event.currentTarget.src = '/product-placeholder.svg' }} alt={product.name} className="w-full h-full object-contain"
+          <img src={product.img || `${import.meta.env.BASE_URL}product-placeholder.svg`} onError={event => { event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg` }} alt={product.name} className="w-full h-full object-contain"
             onError={e => { (e.currentTarget as HTMLImageElement).src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%2276%22%3E%3Crect fill=%22%23f0f4f8%22 width=%22100%22 height=%2276%22/%3E%3C/svg%3E' }} />
         </Link>
         <div className="flex-1 min-w-0">
@@ -303,7 +303,7 @@ function ProductCard({ product, view }: { product: Product; view: 'grid' | 'list
       onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}>
       <div className="relative overflow-hidden" style={{ height: 110, background: 'var(--nb-bg)' }}>
         <Link to={`/products/${product.id}`} className="block w-full h-full">
-          <img src={product.img || '/product-placeholder.svg'} onError={event => { event.currentTarget.src = '/product-placeholder.svg' }} alt={product.name} className="w-full h-full object-contain"
+          <img src={product.img || `${import.meta.env.BASE_URL}product-placeholder.svg`} onError={event => { event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg` }} alt={product.name} className="w-full h-full object-contain"
             onError={e => { (e.currentTarget as HTMLImageElement).src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22%3E%3Crect fill=%22%23f0f4f8%22 width=%22600%22 height=%22400%22/%3E%3C/svg%3E' }} />
         </Link>
         <button onClick={() => toggleWishlist(product.id)}

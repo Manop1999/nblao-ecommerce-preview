@@ -50,9 +50,9 @@ function SalesProductCard({
       >
         <Link to={`/products/${product.id}`} className="block w-full h-full">
           <img
-            src={product.img || "/product-placeholder.svg"}
+            src={product.img || `${import.meta.env.BASE_URL}product-placeholder.svg`}
             onError={(event) => {
-              event.currentTarget.src = "/product-placeholder.svg"
+              event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg`
             }}
             alt={product.name}
             className="w-full h-full object-contain"

@@ -105,14 +105,14 @@ export default function ProductDetail() {
           {/* Gallery */}
           <div>
             <div className="bg-white overflow-hidden mb-3 h-[200px] sm:h-[300px] lg:h-[420px]" style={{ border: '1px solid var(--nb-border)' }}>
-              <img src={product.images[activeImg] || product.img || '/product-placeholder.svg'} onError={event => { event.currentTarget.src = '/product-placeholder.svg' }} alt={product.name} className="w-full h-full object-contain" />
+              <img src={product.images[activeImg] || product.img || `${import.meta.env.BASE_URL}product-placeholder.svg`} onError={event => { event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg` }} alt={product.name} className="w-full h-full object-contain" />
             </div>
             {product.images.length > 1 && (
               <div className="flex gap-2">
                 {product.images.map((img, i) => (
                   <button key={i} onClick={() => setActiveImg(i)}
                     className="overflow-hidden transition-all" style={{ width: 72, height: 54, border: `2px solid ${i === activeImg ? BLUE : 'var(--nb-border)'}` }}>
-                    <img src={img || '/product-placeholder.svg'} onError={event => { event.currentTarget.src = '/product-placeholder.svg' }} alt={`View ${i + 1}`} className="w-full h-full object-contain" />
+                    <img src={img || `${import.meta.env.BASE_URL}product-placeholder.svg`} onError={event => { event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg` }} alt={`View ${i + 1}`} className="w-full h-full object-contain" />
                   </button>
                 ))}
               </div>
@@ -279,7 +279,7 @@ export default function ProductDetail() {
               {related.map(p => (
                 <Link key={p.id} to={`/products/${p.id}`} className="no-underline bg-white flex gap-4 p-4 transition-colors hover:bg-[var(--nb-surface)]" style={{ border: '1px solid var(--nb-border)' }}>
                   <div className="overflow-hidden shrink-0" style={{ width: 80, height: 60, background: 'var(--nb-bg)' }}>
-                    <img src={p.img || '/product-placeholder.svg'} onError={event => { event.currentTarget.src = '/product-placeholder.svg' }} alt={p.name} className="w-full h-full object-contain" />
+                    <img src={p.img || `${import.meta.env.BASE_URL}product-placeholder.svg`} onError={event => { event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg` }} alt={p.name} className="w-full h-full object-contain" />
                   </div>
                   <div className="min-w-0">
                     <div className="font-display font-700 text-[14px] leading-snug mb-1" style={{ color: NAVY }}>{p.name}</div>

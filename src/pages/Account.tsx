@@ -292,8 +292,8 @@ function Wishlist() {
         {items.map(p => (
           <div key={p.id} className="bg-white flex flex-col" style={{ border: '1px solid var(--nb-border)' }}>
             <div className="overflow-hidden" style={{ height: 110, background: 'var(--nb-bg)', flexShrink: 0 }}>
-              <img src={p.img || '/product-placeholder.svg'} alt={p.name} className="w-full h-full object-contain"
-                onError={event => { event.currentTarget.src = '/product-placeholder.svg' }} />
+              <img src={p.img || `${import.meta.env.BASE_URL}product-placeholder.svg`} alt={p.name} className="w-full h-full object-contain"
+                onError={event => { event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg` }} />
             </div>
             <div className="p-3 flex flex-col flex-1">
               <div className="font-ui text-[9px] font-700 tracking-wide uppercase mb-0.5" style={{ color: BLUE }}>{getBrandName(getBrandById(p.brandId), lang)}</div>

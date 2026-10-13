@@ -82,10 +82,10 @@ export default function Compare() {
                     </button>
                     <div className="w-full aspect-square max-w-[140px] mx-auto mb-3 overflow-hidden" style={{ background: 'var(--nb-bg)', border: '1px solid var(--nb-border)' }}>
                       <img
-                        src={p.img || '/product-placeholder.svg'}
+                        src={p.img || `${import.meta.env.BASE_URL}product-placeholder.svg`}
                         alt={p.img ? p.name : ''}
                         className="w-full h-full object-contain"
-                        onError={(event) => { event.currentTarget.src = '/product-placeholder.svg' }}
+                        onError={(event) => { event.currentTarget.src = `${import.meta.env.BASE_URL}product-placeholder.svg` }}
                       />
                     </div>
                     <Link

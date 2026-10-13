@@ -1,4 +1,4 @@
-export const LOGO_SRC = '/nb-lao-logo.png'
+export const LOGO_SRC = `${import.meta.env.BASE_URL}nb-lao-logo.png`
 
 export default function BrandLogo({ className = 'h-9', onDark = false }: { className?: string; onDark?: boolean }) {
   const img = <img src={LOGO_SRC} alt="NB Lao Sole Company Limited" className={`${className} w-auto block shrink-0`} />
